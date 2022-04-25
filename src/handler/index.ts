@@ -3,8 +3,9 @@ import { infoLog } from "../common/util/logger";
 import { getErrorJsonResponse } from "../common/http/response";
 import { HttpHandler } from "../common/http/handler";
 import { apiHealthGet } from "./api/health/get";
+import { pageHandler } from "./page";
 
-const Handlers: HttpHandler[] = [apiHealthGet];
+const Handlers: HttpHandler[] = [pageHandler, apiHealthGet];
 
 export const handleFetchRequest = async (req: Request): Promise<Response> => {
   const request = convertToHttpRequest(req);

@@ -15,9 +15,9 @@ export const wrapSimpleMatchHandler =
     return Promise.resolve(null);
   };
 
-type Matcher = (request: HttpRequest) => Promise<boolean>;
+export type ComplexMatcher = (request: HttpRequest) => Promise<boolean>;
 export const wrapComplexMatchHandler =
-  (matcher: Matcher, handler: Handler): HttpHandler =>
+  (matcher: ComplexMatcher, handler: Handler): HttpHandler =>
   (request: HttpRequest) => {
     return matcher(request).then((match) => {
       if (match) {
