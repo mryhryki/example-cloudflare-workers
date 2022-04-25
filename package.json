@@ -1,0 +1,17 @@
+{
+  "name": "example-cloudflare-workers",
+  "author": "mryhryki",
+  "license": "MIT",
+  "description": "Example for CloudFlare Workers",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@cloudflare/wrangler": "^1.19.12"
+  },
+  "scripts": {
+    "login": "wrangler login",
+    "dev": "wrangler dev",
+    "publish": "wrangler publish",
+    "test": "curl "
+  }
+}
