@@ -10,6 +10,10 @@
     "noEmit": true,
     "noImplicitAny": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "types": [
+      "@cloudflare/workers-types",
+      "@types/jest"
+    ]
   }
 }

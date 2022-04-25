@@ -1,7 +1,5 @@
-addEventListener("fetch", (event) => {
-  event.respondWith(handleRequest(event.request));
-});
+import { handleFetchRequest } from "./handler";
 
-const handleRequest = async (request: Request): Promise<Response> => {
-  return new Response("Hello, TypeScript!");
-};
+addEventListener("fetch", (event: FetchEvent) => {
+  event.respondWith(handleFetchRequest(event.request));
+});
